@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/hacka/Responsive-Login-Form-master/Style5.css" data-n-g="">
+    <link rel="stylesheet" href="/hacka/Responsive-Login-Form-master/Style1.css" data-precedence="next">
+    <link rel="stylesheet" href="/hacka/Responsive-Login-Form-master/style2.css" data-precedence="next">
+    <link rel="stylesheet" href="/hacka/Responsive-Login-Form-master/style3.css" data-precedence="next">
+    <link rel="stylesheet" href="/hacka/Responsive-Login-Form-master/style4.css" data-precedence="next">
+    <style type="text/css">
+        .rfm-marquee-container {
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: row;
+            position: relative;
+            width: var(--width);
+            transform: var(--transform);
+        }
+
+        .rfm-marquee-container:hover div {
+            animation-play-state: var(--pause-on-hover);
+        }
+
+        .rfm-marquee-container:active div {
+            animation-play-state: var(--pause-on-click);
+        }
+
+        .rfm-overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .rfm-overlay::before,
+        .rfm-overlay::after {
+            background: linear-gradient(to right, var(--gradient-color), transparent);
+            content: "";
+            height: 100%;
+            position: absolute;
+            width: var(--gradient-width);
+            z-index: 2;
+            pointer-events: none;
+            touch-action: none;
+        }
+
+        .rfm-overlay::after {
+            right: 0;
+            top: 0;
+            transform: rotateZ(180deg);
+        }
+
+        .rfm-overlay::before {
+            left: 0;
+            top: 0;
+        }
+
+        .rfm-marquee {
+            flex: 0 0 auto;
+            min-width: var(--min-width);
+            z-index: 1;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            animation: scroll var(--duration) linear var(--delay) var(--iteration-count);
+            animation-play-state: var(--play);
+            animation-delay: var(--delay);
+            animation-direction: var(--direction);
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0%);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .rfm-initial-child-container {
+            flex: 0 0 auto;
+            display: flex;
+            min-width: auto;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .rfm-child {
+            transform: var(--transform);
+        }
+    </style>
+
+</head>
+
+<body style="margin-left: 10px;">
+    <div class="fade-in header-relative">
+        <div class="flex-space-between" id="header">
+            <a href="/" class="flex-row __className_44f22e" id="site-logo" aria-label="Interviews by AI"><svg
+                    width="32" height="42" viewBox="0 0 32 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M16 35C20.965 35 25 31.5188 25 27.2353V20.7647C25 16.4812 20.965 13 16 13C11.035 13 7 16.4812 7 20.7647V27.2353C7 31.5188 11.035 35 16 35Z"
+                        stroke="#03a1fc" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path
+                        d="M2 23V26.0909C2 29.7798 3.475 33.3177 6.1005 35.9261C8.72601 38.5346 12.287 40 16 40C19.713 40 23.274 38.5346 25.8995 35.9261C28.525 33.3177 30 29.7798 30 26.0909V23M11.5044 26.9231C14.4444 28.4994 17.5556 28.4994 20.06 26.9231"
+                        stroke="#03a1fc" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <circle cx="13" cy="21" r="2" fill="#03a1fc"></circle>
+                    <circle cx="19" cy="21" r="2" fill="#03a1fc"></circle>
+                    <circle cx="16" cy="6" r="2.5" stroke="#03a1fc" stroke-width="3"></circle>
+                    <path d="M16 14V8" stroke="#03a1fc" stroke-width="3"></path>
+                </svg>
+                <p>CrackInterviews</p>
+            </a>
+            <nav aria-label="Main">
+                <div class="nav-links flex-row nav-links-container "><a href="/pricing"
+                        class="label nav-link">Pricing</a>
+                    <a href="/hacka/Responsive-Login-Form-master/index.html ">
+                        <button class="login-button" style="background-color: #03a1fc;">Login</button></a>
+                </div>
+
+            </nav>
+        </div>
+    </div>
+    <main>
+        <div class="flex-column main-container">
+            <div class="flex-row hero-outer-wrap">
+                <div id="question-generation" class="flex-column hero">
+                    <div class="pill positive fade-in"><span>#1 AI Interview Prep</span></div>
+                    <div class="fade-in flex-column hero-heading-wrap">
+                        <h1 class="landing-page">Boost your confidence,<br><span
+                                class="heading-highlight negative-margin-left">ace the job interview</span></h1>
+                        <h2 class="landing-page hero">Practice job interview questions tailored to your job description.
+                            Get instant AI feedback and suggestions to improve your answers.</h2>
+                    </div>
+                    <div class="flex-column hero-cta-wrap extra-margin-bottom fade-in"><a href="/launch"
+                            class="footer-btn modern-btn link-btn flex-row fade-in">Try now <svg width="17" height="25"
+                                viewBox="0 0 17 25" fill="none" xmlns="http://www.w3.org/2000/svg" style="z-index:1000">
+                                <path d="M10.1203 16.5467L14.167 12.5L10.1203 8.45333M2.83366 12.5L14.0537 12.5"
+                                    stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                            </svg></a><span class="small"></span></div>
+                    <div class="fade-in">
+                        <div class="flex-row mini-testimonial-wrap">
+                            <div class="flex-row profile-picture-wrap">
+                                <div class="testimonial-pic" style="background-image:url(/henry-tran.jpeg)"></div>
+                                <div class="testimonial-pic" style="background-image:url(/jenny-jiang-close.png)"></div>
+                                <div class="testimonial-pic" style="background-image:url(/charles-burr.png)"></div>
+                            </div>
+                            <div class="flex-column testimonial-icon-text-wrap">
+                                <div class="flex-row stars-wrap"><svg width="16" height="16" viewBox="0 0 16 16"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path id="Vector"
+                                            d="M7.62204 1.5995C7.65284 1.52077 7.70528 1.45342 7.7727 1.40602C7.84012 1.35862 7.91947 1.33331 8.00065 1.33331C8.08183 1.33331 8.16118 1.35862 8.2286 1.40602C8.29602 1.45342 8.34846 1.52077 8.37925 1.5995L9.92644 5.49973C9.9554 5.57271 10.003 5.6359 10.064 5.68235C10.125 5.7288 10.1971 5.75671 10.2723 5.763L14.2899 6.10029C14.6532 6.13082 14.8003 6.60623 14.5236 6.85424L11.4627 9.60294C11.4055 9.65421 11.3629 9.721 11.3395 9.79597C11.3162 9.87095 11.3129 9.95122 11.3302 10.028L12.2658 14.1373C12.2846 14.2198 12.2797 14.3062 12.2516 14.3857C12.2236 14.4652 12.1737 14.5342 12.1082 14.584C12.0428 14.6338 11.9647 14.6622 11.8839 14.6655C11.8031 14.6689 11.7232 14.6471 11.6542 14.6028L8.21398 12.4012C8.14974 12.3601 8.07592 12.3383 8.00065 12.3383C7.92537 12.3383 7.85155 12.3601 7.78732 12.4012L4.34711 14.6036C4.27813 14.6478 4.19818 14.6697 4.11737 14.6663C4.03655 14.663 3.95849 14.6346 3.89305 14.5848C3.82761 14.535 3.77772 14.466 3.74968 14.3865C3.72164 14.3069 3.71671 14.2205 3.73552 14.1381L4.67111 10.028C4.68846 9.95122 4.68527 9.87092 4.66189 9.79593C4.63851 9.72094 4.59585 9.65416 4.5386 9.60294L1.47772 6.85424C1.41608 6.79917 1.37142 6.72616 1.3494 6.64447C1.32738 6.56278 1.32898 6.47608 1.35401 6.39535C1.37904 6.31461 1.42636 6.24348 1.48999 6.19095C1.55362 6.13843 1.63069 6.10688 1.71143 6.10029L5.72902 5.763C5.80419 5.75671 5.87625 5.7288 5.93727 5.68235C5.99829 5.6359 6.0459 5.57271 6.07486 5.49973L7.62204 1.5995Z"
+                                            fill="#03a1fc"></path>
+                                    </svg><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path id="Vector"
+                                            d="M7.62204 1.5995C7.65284 1.52077 7.70528 1.45342 7.7727 1.40602C7.84012 1.35862 7.91947 1.33331 8.00065 1.33331C8.08183 1.33331 8.16118 1.35862 8.2286 1.40602C8.29602 1.45342 8.34846 1.52077 8.37925 1.5995L9.92644 5.49973C9.9554 5.57271 10.003 5.6359 10.064 5.68235C10.125 5.7288 10.1971 5.75671 10.2723 5.763L14.2899 6.10029C14.6532 6.13082 14.8003 6.60623 14.5236 6.85424L11.4627 9.60294C11.4055 9.65421 11.3629 9.721 11.3395 9.79597C11.3162 9.87095 11.3129 9.95122 11.3302 10.028L12.2658 14.1373C12.2846 14.2198 12.2797 14.3062 12.2516 14.3857C12.2236 14.4652 12.1737 14.5342 12.1082 14.584C12.0428 14.6338 11.9647 14.6622 11.8839 14.6655C11.8031 14.6689 11.7232 14.6471 11.6542 14.6028L8.21398 12.4012C8.14974 12.3601 8.07592 12.3383 8.00065 12.3383C7.92537 12.3383 7.85155 12.3601 7.78732 12.4012L4.34711 14.6036C4.27813 14.6478 4.19818 14.6697 4.11737 14.6663C4.03655 14.663 3.95849 14.6346 3.89305 14.5848C3.82761 14.535 3.77772 14.466 3.74968 14.3865C3.72164 14.3069 3.71671 14.2205 3.73552 14.1381L4.67111 10.028C4.68846 9.95122 4.68527 9.87092 4.66189 9.79593C4.63851 9.72094 4.59585 9.65416 4.5386 9.60294L1.47772 6.85424C1.41608 6.79917 1.37142 6.72616 1.3494 6.64447C1.32738 6.56278 1.32898 6.47608 1.35401 6.39535C1.37904 6.31461 1.42636 6.24348 1.48999 6.19095C1.55362 6.13843 1.63069 6.10688 1.71143 6.10029L5.72902 5.763C5.80419 5.75671 5.87625 5.7288 5.93727 5.68235C5.99829 5.6359 6.0459 5.57271 6.07486 5.49973L7.62204 1.5995Z"
+                                            fill="#03a1fc"></path>
+                                    </svg><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path id="Vector"
+                                            d="M7.62204 1.5995C7.65284 1.52077 7.70528 1.45342 7.7727 1.40602C7.84012 1.35862 7.91947 1.33331 8.00065 1.33331C8.08183 1.33331 8.16118 1.35862 8.2286 1.40602C8.29602 1.45342 8.34846 1.52077 8.37925 1.5995L9.92644 5.49973C9.9554 5.57271 10.003 5.6359 10.064 5.68235C10.125 5.7288 10.1971 5.75671 10.2723 5.763L14.2899 6.10029C14.6532 6.13082 14.8003 6.60623 14.5236 6.85424L11.4627 9.60294C11.4055 9.65421 11.3629 9.721 11.3395 9.79597C11.3162 9.87095 11.3129 9.95122 11.3302 10.028L12.2658 14.1373C12.2846 14.2198 12.2797 14.3062 12.2516 14.3857C12.2236 14.4652 12.1737 14.5342 12.1082 14.584C12.0428 14.6338 11.9647 14.6622 11.8839 14.6655C11.8031 14.6689 11.7232 14.6471 11.6542 14.6028L8.21398 12.4012C8.14974 12.3601 8.07592 12.3383 8.00065 12.3383C7.92537 12.3383 7.85155 12.3601 7.78732 12.4012L4.34711 14.6036C4.27813 14.6478 4.19818 14.6697 4.11737 14.6663C4.03655 14.663 3.95849 14.6346 3.89305 14.5848C3.82761 14.535 3.77772 14.466 3.74968 14.3865C3.72164 14.3069 3.71671 14.2205 3.73552 14.1381L4.67111 10.028C4.68846 9.95122 4.68527 9.87092 4.66189 9.79593C4.63851 9.72094 4.59585 9.65416 4.5386 9.60294L1.47772 6.85424C1.41608 6.79917 1.37142 6.72616 1.3494 6.64447C1.32738 6.56278 1.32898 6.47608 1.35401 6.39535C1.37904 6.31461 1.42636 6.24348 1.48999 6.19095C1.55362 6.13843 1.63069 6.10688 1.71143 6.10029L5.72902 5.763C5.80419 5.75671 5.87625 5.7288 5.93727 5.68235C5.99829 5.6359 6.0459 5.57271 6.07486 5.49973L7.62204 1.5995Z"
+                                            fill="#03a1fc"></path>
+                                    </svg><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path id="Vector"
+                                            d="M7.62204 1.5995C7.65284 1.52077 7.70528 1.45342 7.7727 1.40602C7.84012 1.35862 7.91947 1.33331 8.00065 1.33331C8.08183 1.33331 8.16118 1.35862 8.2286 1.40602C8.29602 1.45342 8.34846 1.52077 8.37925 1.5995L9.92644 5.49973C9.9554 5.57271 10.003 5.6359 10.064 5.68235C10.125 5.7288 10.1971 5.75671 10.2723 5.763L14.2899 6.10029C14.6532 6.13082 14.8003 6.60623 14.5236 6.85424L11.4627 9.60294C11.4055 9.65421 11.3629 9.721 11.3395 9.79597C11.3162 9.87095 11.3129 9.95122 11.3302 10.028L12.2658 14.1373C12.2846 14.2198 12.2797 14.3062 12.2516 14.3857C12.2236 14.4652 12.1737 14.5342 12.1082 14.584C12.0428 14.6338 11.9647 14.6622 11.8839 14.6655C11.8031 14.6689 11.7232 14.6471 11.6542 14.6028L8.21398 12.4012C8.14974 12.3601 8.07592 12.3383 8.00065 12.3383C7.92537 12.3383 7.85155 12.3601 7.78732 12.4012L4.34711 14.6036C4.27813 14.6478 4.19818 14.6697 4.11737 14.6663C4.03655 14.663 3.95849 14.6346 3.89305 14.5848C3.82761 14.535 3.77772 14.466 3.74968 14.3865C3.72164 14.3069 3.71671 14.2205 3.73552 14.1381L4.67111 10.028C4.68846 9.95122 4.68527 9.87092 4.66189 9.79593C4.63851 9.72094 4.59585 9.65416 4.5386 9.60294L1.47772 6.85424C1.41608 6.79917 1.37142 6.72616 1.3494 6.64447C1.32738 6.56278 1.32898 6.47608 1.35401 6.39535C1.37904 6.31461 1.42636 6.24348 1.48999 6.19095C1.55362 6.13843 1.63069 6.10688 1.71143 6.10029L5.72902 5.763C5.80419 5.75671 5.87625 5.7288 5.93727 5.68235C5.99829 5.6359 6.0459 5.57271 6.07486 5.49973L7.62204 1.5995Z"
+                                            fill="#03a1fc"></path>
+                                    </svg><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path id="Vector"
+                                            d="M7.62204 1.5995C7.65284 1.52077 7.70528 1.45342 7.7727 1.40602C7.84012 1.35862 7.91947 1.33331 8.00065 1.33331C8.08183 1.33331 8.16118 1.35862 8.2286 1.40602C8.29602 1.45342 8.34846 1.52077 8.37925 1.5995L9.92644 5.49973C9.9554 5.57271 10.003 5.6359 10.064 5.68235C10.125 5.7288 10.1971 5.75671 10.2723 5.763L14.2899 6.10029C14.6532 6.13082 14.8003 6.60623 14.5236 6.85424L11.4627 9.60294C11.4055 9.65421 11.3629 9.721 11.3395 9.79597C11.3162 9.87095 11.3129 9.95122 11.3302 10.028L12.2658 14.1373C12.2846 14.2198 12.2797 14.3062 12.2516 14.3857C12.2236 14.4652 12.1737 14.5342 12.1082 14.584C12.0428 14.6338 11.9647 14.6622 11.8839 14.6655C11.8031 14.6689 11.7232 14.6471 11.6542 14.6028L8.21398 12.4012C8.14974 12.3601 8.07592 12.3383 8.00065 12.3383C7.92537 12.3383 7.85155 12.3601 7.78732 12.4012L4.34711 14.6036C4.27813 14.6478 4.19818 14.6697 4.11737 14.6663C4.03655 14.663 3.95849 14.6346 3.89305 14.5848C3.82761 14.535 3.77772 14.466 3.74968 14.3865C3.72164 14.3069 3.71671 14.2205 3.73552 14.1381L4.67111 10.028C4.68846 9.95122 4.68527 9.87092 4.66189 9.79593C4.63851 9.72094 4.59585 9.65416 4.5386 9.60294L1.47772 6.85424C1.41608 6.79917 1.37142 6.72616 1.3494 6.64447C1.32738 6.56278 1.32898 6.47608 1.35401 6.39535C1.37904 6.31461 1.42636 6.24348 1.48999 6.19095C1.55362 6.13843 1.63069 6.10688 1.71143 6.10029L5.72902 5.763C5.80419 5.75671 5.87625 5.7288 5.93727 5.68235C5.99829 5.6359 6.0459 5.57271 6.07486 5.49973L7.62204 1.5995Z"
+                                            fill="#03a1fc"></path>
+                                    </svg></div><span class="label">Leave a review</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fade-in hero-graphic-outer-wrap">
+                    <div class="hero-wrap">
+                        <div class="graphic-wrap">
+                            <div class="hidden-btn"><button id="pause-play-btn"
+                                    aria-label="Pause the following animation that auto-rotates through radio options"
+                                    aria-pressed="false"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path d="M8 5V19M16 5V19" stroke="#000000" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg></button></div>
+                            <div class="inner-graphic-wrap">
+                                <div class="hero-roles-wrap flex-column">
+                                    <h3>Turn a <b>job description</b> into <b>interview questions</b> to practice with:
+                                    </h3>
+                                    <div class="hero-chip">
+                                        <div class="roles-chips" role="radiogroup"
+                                            aria-label="Select a sample role to read examples of interview questions">
+                                            <label class="chip border "><input type="radio" aria-checked="false"
+                                                    aria-labelledby="chip-label-Custom-Job-Description"
+                                                    name="role-chip-group" checked=""><span
+                                                    id="chip-label-Custom-Job-Description">Custom Job
+                                                    Description</span></label><label class="chip border "><input
+                                                    type="radio" aria-checked="false"
+                                                    aria-labelledby="chip-label-Business-Analyst"
+                                                    name="role-chip-group"><span
+                                                    id="chip-label-Business-Analyst">Business
+                                                    Analyst</span></label><label class="chip border"><input
+                                                    type="radio" aria-checked="true"
+                                                    aria-labelledby="chip-label-Product-Manager" name="role-chip-group"
+                                                    aria-describedby="active-question"><span
+                                                    id="chip-label-Product-Manager">Product Manager</span></label><label
+                                                class="chip border active"><input type="radio" aria-checked="false"
+                                                    aria-labelledby="chip-label-Software-Engineer"
+                                                    name="role-chip-group"><span
+                                                    id="chip-label-Software-Engineer">Software
+                                                    Engineer</span></label><label class="chip border "><input
+                                                    type="radio" aria-checked="false"
+                                                    aria-labelledby="chip-label-Marketing-Specialist"
+                                                    name="role-chip-group"><span
+                                                    id="chip-label-Marketing-Specialist">Marketing
+                                                    Specialist</span></label><label class="chip border "><input
+                                                    type="radio" aria-checked="false"
+                                                    aria-labelledby="chip-label-Customer-Service-Representative"
+                                                    name="role-chip-group"><span
+                                                    id="chip-label-Customer-Service-Representative">Customer Service
+                                                    Representative</span></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex-column question-box">
+                                    <div class="flex-column question-section">
+                                        <h2 class="question-subheader max-content animate" id="active-question">Can you
+                                            walk me through a product you've managed from its conceptual phase to
+                                            launch, highlighting the key milestones?</h2>
+                                    </div>
+                                    <div class="recorder-container">
+                                        <div class="stopwatch">
+                                            <p>0:00 / 2:00</p>
+                                        </div> <button
+                                            aria-label="Launch a new interview for the role of Product Manager"
+                                            class="microphone-btn"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                height="24" viewBox="0 0 24 24" fill="none">
+                                                <path
+                                                    d="M12 15.5c2.21 0 4-1.79 4-4V6c0-2.21-1.79-4-4-4S8 3.79 8 6v5.5c0 2.21 1.79 4 4 4Z"
+                                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round"></path>
+                                                <path
+                                                    d="M4.35 9.65v1.7C4.35 15.57 7.78 19 12 19c4.22 0 7.65-3.43 7.65-7.65v-1.7M10.61 6.43c.9-.33 1.88-.33 2.78 0M11.2 8.55c.53-.14 1.08-.14 1.61 0M12 19v3"
+                                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round"></path>
+                                            </svg></button>
+                                    </div>
+                                    <div class="question-footer"></div>
+                                    <details class="accordion-section" tabindex="-1">
+                                        <summary class="empty" tabindex="-1">
+                                            <h4>Feedback</h4><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9 18L15 12L9 6" stroke="#C6C9CF" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </svg>
+                                        </summary>
+                                    </details>
+                                    <details class="accordion-section" tabindex="-1">
+                                        <summary class="empty" tabindex="-1">
+                                            <h4>Sample Response</h4><svg width="24" height="24" viewBox="0 0 24 24"
+                                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9 18L15 12L9 6" stroke="#C6C9CF" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </svg>
+                                        </summary>
+                                    </details>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col gap-12 pb-32">
+                <p class="mx-auto text-base font-semibold leading-7 text-indigo-600">Get a chance at</p>
+                <div class="mx-auto w-full max-w-7xl px-6 lg:px-8">
+                    <div class="rfm-marquee-container "
+                        style="--pause-on-hover: running; --pause-on-click: running; --width: 100%; --transform: none;">
+                        <div class="rfm-overlay" style="--gradient-color: white; --gradient-width: 200px;"></div>
+                        <div class="rfm-marquee"
+                            style="--play: running; --direction: normal; --duration: 28.755s; --delay: 0s; --iteration-count: infinite; --min-width: 100%;">
+                            <div class="rfm-initial-child-container">
+                                <div class="rfm-child" style="--transform: none;">
+                                    <div class="mr-12 flex items-center gap-12 sm:mr-24 sm:gap-24"><img
+                                            src="/hacka/Responsive-Login-Form-master/img/apple.png" alt="Apple"
+                                            class="h-10 rounded-md object-cover"><img
+                                            src="/hacka/Responsive-Login-Form-master/img/shopify.svg" alt="Shopify"
+                                            class="h-10 rounded-md object-cover"><img
+                                            src="/hacka/Responsive-Login-Form-master/img/google.webp" alt="Google"
+                                            class="h-10 rounded-md object-cover"><img
+                                            src="/hacka/Responsive-Login-Form-master/img/stripe.png" alt="Stripe"
+                                            class="h-10 rounded-md object-cover"><img
+                                            src="/hacka/Responsive-Login-Form-master/img/meta.png" alt="Meta"
+                                            class="h-10 rounded-md object-cover"><img
+                                            src="/hacka/Responsive-Login-Form-master/img/pipedrive.svg" alt="Pipedrive"
+                                            class="h-10 rounded-md object-cover"><img
+                                            src="/hacka/Responsive-Login-Form-master/img/microsoft.webp" alt="Microsoft"
+                                            class="h-10 rounded-md object-cover"><img
+                                            src="/hacka/Responsive-Login-Form-master/img/nvidia.svg" alt="Nvidia"
+                                            class="h-10 rounded-md object-cover"><img
+                                            src="/hacka/Responsive-Login-Form-master/img/uber.webp" alt="Uber"
+                                            class="h-10 rounded-md object-cover"><img
+                                            src="/hacka/Responsive-Login-Form-master/img/notion.svg" alt="Notion"
+                                            class="h-10 rounded-md object-cover"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rfm-marquee"
+                            style="--play: running; --direction: normal; --duration: 28.755s; --delay: 0s; --iteration-count: infinite; --min-width: 100%;">
+                            <div class="rfm-child" style="--transform: none;">
+                                <div class="mr-12 flex items-center gap-12 sm:mr-24 sm:gap-24"><img
+                                        src="/hacka/Responsive-Login-Form-master/img/apple.png" alt="Apple"
+                                        class="h-10 rounded-md object-cover"><img
+                                        src="/hacka/Responsive-Login-Form-master/img/shopify.svg" alt="Shopify"
+                                        class="h-10 rounded-md object-cover"><img
+                                        src="/hacka/Responsive-Login-Form-master/img/google.webp" alt="Google"
+                                        class="h-10 rounded-md object-cover"><img
+                                        src="/hacka/Responsive-Login-Form-master/img/stripe.png" alt="Stripe"
+                                        class="h-10 rounded-md object-cover"><img
+                                        src="/hacka/Responsive-Login-Form-master/img/meta.png" alt="Meta"
+                                        class="h-10 rounded-md object-cover"><img
+                                        src="/hacka/Responsive-Login-Form-master/img/pipedrive.svg" alt="Pipedrive"
+                                        class="h-10 rounded-md object-cover"><img
+                                        src="/hacka/Responsive-Login-Form-master/img/microsoft.webp" alt="Microsoft"
+                                        class="h-10 rounded-md object-cover"><img
+                                        src="/hacka/Responsive-Login-Form-master/img/nvidia.svg" alt="Nvidia"
+                                        class="h-10 rounded-md object-cover"><img
+                                        src="/hacka/Responsive-Login-Form-master/img/uber.webp" alt="Uber"
+                                        class="h-10 rounded-md object-cover"><img
+                                        src="/hacka/Responsive-Login-Form-master/img/notion.svg" alt="Notion"
+                                        class="h-10 rounded-md object-cover"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
